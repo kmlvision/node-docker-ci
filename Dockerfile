@@ -1,5 +1,5 @@
 FROM kmlvision/docker-compose
 LABEL MAINTAINER="KML VISION, devops@kmlvision.com"
 
-# install the default alpine node and npm versions 
-RUN apk add --no-cache nodejs npm
+RUN apk --update --no-cache add git openssh nodejs npm curl && \
+    rm -rf /var/lib/apt/lists/*
